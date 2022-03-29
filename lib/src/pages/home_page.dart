@@ -4,8 +4,6 @@ import 'package:flutter/material.dart';
 
 class MyHomePage extends StatelessWidget {
   final user = FirebaseAuth.instance.currentUser!;
-  static const _baseURL =
-      'https://login-flutter-4038f-default-rtdb.firebaseio.com/';
   final CollectionReference _publicacoes =
       FirebaseFirestore.instance.collection('publicacoes');
   String post = '';
