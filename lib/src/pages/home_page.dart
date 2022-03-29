@@ -24,7 +24,6 @@ class MyHomePage extends StatelessWidget {
       ),
       body: Center(
         child: Column(children: [
-          const Text('Logado como:'),
           Text(
             user.email!,
             style: const TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
@@ -35,11 +34,15 @@ class MyHomePage extends StatelessWidget {
                 Navigator.pushNamed(context, '/login');
               },
               child: const Text('Sair')),
-          TextField(
-            controller: myController,
-            decoration: const InputDecoration(
-                hintText: 'Escreva seu post...',
-                contentPadding: EdgeInsets.all(8.0)),
+          Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: TextField(
+              controller: myController,
+              decoration: const InputDecoration(
+                  border: OutlineInputBorder(),
+                  hintText: 'Escreva seu post...',
+                  contentPadding: EdgeInsets.all(8.0)),
+            ),
           ),
           const SizedBox(
             height: 20,
@@ -51,7 +54,7 @@ class MyHomePage extends StatelessWidget {
                 _adicionarBD();
                 myController.clear();
               },
-              child: const Text('Publicar')),
+              child: const Icon(Icons.add)),
           const SizedBox(
             height: 20,
             width: 20,
