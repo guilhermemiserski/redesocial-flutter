@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "560570583880",
+    "project_id": "login-flutter-4038f",
+    "storage_bucket": "login-flutter-4038f.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:560570583880:android:567e0f9a5bbf29389b417d",
+        "android_client_info": {
+          "package_name": "com.example.trespaginas"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "560570583880-og71a6u120akj1u5j4keie0iggfikieo.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBM59HMYNme0BEkbiHjKs_lrnavZwklnQo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "560570583880-og71a6u120akj1u5j4keie0iggfikieo.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
