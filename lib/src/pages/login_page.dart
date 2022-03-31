@@ -5,8 +5,8 @@ import 'package:trespaginas/src/pages/home_page.dart';
 class LoginPage extends StatelessWidget {
   final _formKey = GlobalKey<FormState>();
 
-  String email = '';
-  String senha = '';
+  String _email = '';
+  String _senha = '';
 
   @override
   Widget build(BuildContext context) {
@@ -53,7 +53,7 @@ class LoginPage extends StatelessWidget {
                           return null;
                         },
                         onSaved: (value) {
-                          email = value!;
+                          _email = value!;
                         },
                       ),
                       const SizedBox(
@@ -74,7 +74,7 @@ class LoginPage extends StatelessWidget {
                           return null;
                         },
                         onSaved: (value) {
-                          senha = value!;
+                          _senha = value!;
                         },
                       ),
                       const SizedBox(
@@ -115,6 +115,6 @@ class LoginPage extends StatelessWidget {
 
   Future _signIn() async {
     await FirebaseAuth.instance
-        .signInWithEmailAndPassword(email: email, password: senha);
+        .signInWithEmailAndPassword(email: _email, password: _senha);
   }
 }

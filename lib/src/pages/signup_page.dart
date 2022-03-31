@@ -1,6 +1,5 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
-import 'package:trespaginas/src/pages/home_page.dart';
 
 class SignUpPage extends StatelessWidget {
   final _formKey = GlobalKey<FormState>();
