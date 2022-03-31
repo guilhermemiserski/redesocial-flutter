@@ -4,8 +4,8 @@ import 'package:flutter/material.dart';
 class SignUpPage extends StatelessWidget {
   final _formKey = GlobalKey<FormState>();
 
-  String email = '';
-  String senha = '';
+  String _email = '';
+  String _senha = '';
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -45,7 +45,7 @@ class SignUpPage extends StatelessWidget {
                   return null;
                 },
                 onSaved: (value) {
-                  email = value!;
+                  _email = value!;
                 },
               ),
               const SizedBox(
@@ -66,7 +66,7 @@ class SignUpPage extends StatelessWidget {
                   return null;
                 },
                 onSaved: (value) {
-                  senha = value!;
+                  _senha = value!;
                 },
               ),
               const SizedBox(
@@ -104,7 +104,7 @@ class SignUpPage extends StatelessWidget {
 
   Future _signUp(BuildContext context) async {
     await FirebaseAuth.instance
-        .createUserWithEmailAndPassword(email: email, password: senha);
+        .createUserWithEmailAndPassword(email: _email, password: _senha);
     Navigator.pushNamed(context, '/login');
   }
 }
