@@ -105,6 +105,12 @@ class SignUpPage extends StatelessWidget {
   Future _signUp(BuildContext context) async {
     await FirebaseAuth.instance
         .createUserWithEmailAndPassword(email: _email, password: _senha);
+    final user = FirebaseAuth.instance.currentUser!;
+    final isVerified = user.emailVerified;
+    if (!isVerified) {
+      final user = FirebaseAuth.instance.currentUser!;
+      await user.sendEmailVerification();
+    }
     Navigator.pushNamed(context, '/login');
   }
 }

@@ -14,12 +14,17 @@ class MyHomePage extends StatelessWidget {
       appBar: AppBar(title: const Text('Home')),
       drawer: Drawer(
         child: ListView(padding: EdgeInsets.zero, children: [
-          TextButton(
-              onPressed: () => Navigator.pushNamed(context, '/settings'),
-              child: const Text('Settings')),
+          UserAccountsDrawerHeader(
+              currentAccountPicture:
+                  Image.network('https://picsum.photos/250?image=9'),
+              accountName: const Text('User'),
+              accountEmail: Text(user.email!)),
           TextButton(
               onPressed: () => Navigator.pushNamed(context, '/profile'),
-              child: const Text('Profile')),
+              child: const Icon(Icons.person)),
+          TextButton(
+              onPressed: () => Navigator.pushNamed(context, '/settings'),
+              child: const Icon(Icons.settings)),
         ]),
       ),
       body: Center(

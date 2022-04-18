@@ -9,10 +9,10 @@ class MyProfilePage extends StatelessWidget {
         child: ListView(padding: EdgeInsets.zero, children: [
           TextButton(
               onPressed: () => Navigator.pushNamed(context, '/home'),
-              child: const Text('Home')),
+              child: const Icon(Icons.home)),
           TextButton(
               onPressed: () => Navigator.pushNamed(context, '/settings'),
-              child: const Text('Settings')),
+              child: const Icon(Icons.settings)),
         ]),
       ),
     );
